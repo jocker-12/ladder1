@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: "微软雅黑";
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img,
+div,
+body,
+html,
+ul,
+li,
+a {
+    -webkit-touch-callout: none;
+}
+
+input,
+button {
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+//宽高
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+//弹性盒
+@mixin flex($j:space-between, $a:center) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+}
+
+//单行文本省略号
+@mixin one-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//多行文本略号
+@mixin line($num) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+}
+
+//滚动条
+@mixin scroll {
+    overflow: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+}

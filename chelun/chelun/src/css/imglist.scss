@@ -1,0 +1,42 @@
+@import './_base.scss';
+.showlist_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    @include scroll;
+}
+
+.list_box {
+    @include wh(100%, auto);
+    background: #fff;
+    @include flex;
+    position: relative;
+    padding-bottom: .8rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    li {
+        width: 2.5rem;
+        height: 2.4rem;
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover!important;
+        }
+    }
+}
+
+.load {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include wh(100%, .8rem);
+    background: #fff;
+    color: #000;
+    font-size: .24rem;
+    text-align: center;
+    line-height: .8rem;
+}
