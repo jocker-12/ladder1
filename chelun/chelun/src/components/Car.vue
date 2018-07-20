@@ -6,8 +6,8 @@
         </div>
         <div class='info'>
              <p v-if='datas.market_attribute'><span>{{datas.market_attribute.dealer_price}}万</span>
-               <span>指导价{{datas.market_attribute.official_refer_price}}</span> </p>
-             <div class="action"><button class="hover">{{datas.BottomEntranceTitle}}</button></div>
+               <span>指导价{{datas.market_attribute.official_refer_price}}</span></p>
+             <div class="action hover" style='fontSize:14px;' @click='routerToPrice(priceId)'>{{datas.BottomEntranceTitle}}</div>
         </div>
         <div class="carLis">
           <div class='changes'>
@@ -15,7 +15,7 @@
               {{item}}
             </span>
           </div>
-           <TypeList :typeList='typeList'/>
+           <TypeList :typeList='typeList' :routerToPrice='routerToPrice'/>
         </div>
         <div class="footer">
           <p>询问低价</p>
@@ -64,6 +64,8 @@ export default {
             }
           });
           arrs.unshift("全部");
+          window.localStorage.setItem("car", JSON.stringify(this.list));
+
           this.type = arrs;
           this.typeList = body.data.list;
           this.change("全部");
@@ -124,8 +126,9 @@ export default {
           }
         });
       };
-      console.log(sortCar(arrs));
       this.typeList = sortCar(arrs);
+      console.log("5", this.typeList[0].data[0]["car_id"]);
+      this.priceId = this.typeList[0].data[0]["car_id"];
     },
     toImg(id) {
       this.$router.push({
@@ -134,6 +137,15 @@ export default {
         query: {
           id: id
         }
+      });
+    },
+    routerToPrice(carId) {
+      console.log(carId);
+      let id = this.$route.query.id;
+      this.$router.push({
+        path: "/price",
+        name: "Price",
+        query: { id: id, carId: carId }
       });
     }
   },

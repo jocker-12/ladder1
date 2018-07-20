@@ -41,7 +41,6 @@ export default {
         }&ImageID=${this.showImgId}&Page=${this.page}&PageSize=30`
       ).then(res => {
         res.json().then(body => {
-          console.log(body);
           body.data.List.forEach((item, index) => {
             item.Url = item.Url.replace("{0}", 3);
           });
@@ -64,7 +63,7 @@ export default {
         window.innerHeight + scrollBox.scrollTop >
         this.$refs.scrollBox.children[0].offsetHeight - 30
       ) {
-        this.page += 1;
+        this.page++;
         this.init();
       }
     }, 500);

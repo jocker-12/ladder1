@@ -14,6 +14,7 @@ import Btn from "./common/btn";
 import Loading from "./loading";
 import Master from "./common/master";
 import { lazyLoad, throttle } from "./utils/utils.js";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "index",
   data() {
@@ -25,6 +26,11 @@ export default {
       isloading: true
     };
   },
+  computed: {
+    ...mapState({
+      indexData: state => state.index.index_data
+    })
+  },
   components: {
     Loading,
     List,
@@ -34,6 +40,7 @@ export default {
   methods: {
     //初始化获取数据
     init() {
+      console.log(this.indexData);
       fetch("https://baojia.chelun.com/v2-car-getMasterBrandList.html").then(
         res => {
           res.json().then(body => {

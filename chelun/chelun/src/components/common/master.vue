@@ -64,6 +64,7 @@ export default {
       }
     },
     toCar(id) {
+      window.localStorage.setItem("id", id);
       this.$router.push({
         path: "/car",
         name: "Car",

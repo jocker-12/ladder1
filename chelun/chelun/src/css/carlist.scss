@@ -1,0 +1,98 @@
+@import './_base.scss';
+.carList_box {
+    position: fixed;
+    top: 0;
+    height: 0;
+    z-index: 99990;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: all .2s linear;
+    h1 {
+        height: .4rem;
+        line-height: .4rem;
+        font-size: .24rem;
+        padding-left: .2rem;
+        background: #f4f4f4;
+    }
+    main {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        ul {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: .2rem;
+            li {
+                padding-left: .3rem;
+                font-size: .28rem;
+                height: .8rem;
+                line-height: .8rem;
+                border-bottom: 1px solid #eee;
+                box-sizing: border-box;
+                margin-left: .1rem;
+                position: relative;
+                span {
+                    font-size: .26rem;
+                }
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    padding-top: .16rem;
+                    padding-right: .16rem;
+                    border-top: 1px solid #999;
+                    border-right: 1px solid #999;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    position: absolute;
+                    right: .35rem;
+                    top: .3rem;
+                }
+            }
+        }
+    }
+    .citybox {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        overflow: hidden;
+        background: rgba(0, 0, 0, .6);
+        visibility: visible;
+        ul {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            background: #fff;
+            transform: translateX(40%);
+            transition: all .1s linear;
+            li {
+                padding-left: .3rem;
+                font-size: .28rem;
+                height: .8rem;
+                line-height: .8rem;
+                border-bottom: 1px solid #eee;
+                box-sizing: border-box;
+                margin-left: .1rem;
+                position: relative;
+                span {
+                    font-size: .26rem;
+                }
+            }
+        }
+    }
+    .active {
+        visibility: hidden !important;
+        ul {
+            transform: translateX(100%) !important;
+        }
+    }
+}
+
+#on {
+    transform: translateY(0);
+}

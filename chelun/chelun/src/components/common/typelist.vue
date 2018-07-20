@@ -1,18 +1,18 @@
 <template>
    <div class='typeBox'>
-        <div v-for='(item,index) in typeList' :key='index'>
-            <h1>{{item.title}}</h1>
-            <ul>
-                <li v-for='(v,i) in item.data' :key='i' :id='v.car_id'>
-                    <p>{{v.car_name}}</p>
-                    <p>{{v.horse_power}}马力{{v.gear_num}}挡</p>
-                    <p><span>指导价{{v.market_attribute.official_refer_price}}</span><span>{{v.market_attribute.dealer_price_min}}起</span></p>
-                    <span class='btn'>询问低价
-                    </span>
+    <div v-for='(item,index) in typeList' :key='index'>
+        <h1>{{item.title}}</h1>
+        <ul>
+            <li v-for='(v,i) in item.data' :key='i' :id='v.car_id'>
+                <p>{{v.car_name}}</p>
+                <p>{{v.horse_power}}马力{{v.gear_num}}挡</p>
+                <p><span>指导价{{v.market_attribute.official_refer_price}}</span><span>{{v.market_attribute.dealer_price_min}}起</span></p>
+                <span class='btn' @click='routerToPrice(v.car_id)'>询问低价
+                </span>
 
-                </li>
-            </ul>
-        </div>
+            </li>
+        </ul>
+    </div>
    </div>
 </template>
 <script>
@@ -26,6 +26,9 @@ export default {
   props: {
     typeList: {
       type: Array
+    },
+    routerToPrice: {
+      type: Function
     }
   },
   methods: {},
