@@ -171,7 +171,6 @@ app.get('/accessList', (req, res) => {
     });
 })
 
-
 app.get('/list', (req, res) => {
     // connection.connect();
 
@@ -204,4 +203,4 @@ app.get('/list', (req, res) => {
 
 app.listen(9090);
 
-console.log('启动服务...');
+console.log('启动服务...')

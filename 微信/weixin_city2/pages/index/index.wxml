@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <text>
+    这是西瓜足迹
+  </text>
+  <view bindtap='toInfo'>
+  开始
+  </view>
+</view>

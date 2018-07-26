@@ -1,0 +1,40 @@
+/* pages/info/info.wxss */
+.infoBox{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infoBox .left{
+    width:360rpx;
+    height:100%;
+    overflow-y:scroll;
+}
+.infoBox .left .btnList{
+    width:100%;
+    height:auto;
+}
+.infoBox .left .btnList view.on{
+    color:#f60;
+}
+.infoBox .right{
+    flex:1;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.infoBox .right .list{
+    flex:1;
+    width:100%;
+}
+.infoBox .right .list view.on{
+    background:yellow;
+}
+.infoBox .right .bottomBtn{
+    width:100%;
+    height:60rpx;
+    background: red;
+}

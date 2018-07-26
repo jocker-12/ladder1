@@ -1,0 +1,9 @@
+<view>
+ 
+   <image src="{{info.image}}"></image>
+   <text>
+    {{info.title}}
+    {{info.author}}
+    </text>
+    <slider></slider>
+</view>

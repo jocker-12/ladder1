@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/info/info",
+    "pages/img/img"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "西瓜足迹",
+    "navigationBarTextStyle":"light"
+  }
+}

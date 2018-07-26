@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='logtxt'>
+    中国<text>34</text>个省，<text>660</text>个城市
+    <view>
+        你去过多久？
+    </view>
+  </view>
+
+  <image src="../../image/11.png" class='logimg'></image>
+  <button class='logbtn' bindtap='toLogs'>开始</button>
+</view>
