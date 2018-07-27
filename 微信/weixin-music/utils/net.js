@@ -1,13 +1,12 @@
-// 获取歌曲列表
-export let getMusicList = () => {
-    return new Promise((resolve, reject) => {
+export let getMusicList = ()=>{
+    return new Promise((resolve,reject)=>{
         wx.request({
-            url: 'https://www.easy-mock.com/mock/5af6599acf64741ceacf1c57/es6/musicList',
-            success: (res) => {
-                resolve(res.data);
+            url: 'https://www.easy-mock.com/mock/5b2af36ccabcb138f69e8bb6/lianxi/likeMusic',
+            success:function(res){
+                resolve(res.data)
             },
-            fail: (error) => {
-                reject(error);
+            err:function(err){
+                reject(err);
             }
         })
     })

@@ -1,9 +1,11 @@
+<!--pages/infos/infos.wxml-->
+<view class='imgBox'>
+    <image src='http://img3.imgtn.bdimg.com/it/u=4209164775,3618363424&fm=27&gp=0.jpg'></image>
+</view>
 <view>
- 
-   <image src="{{info.image}}"></image>
-   <text>
-    {{info.title}}
-    {{info.author}}
-    </text>
-    <slider></slider>
+<text>{{data.name}}</text>
+<text>{{data.author}}</text>
+</view>
+<view>
+<audio></audio>
 </view>
