@@ -1,23 +1,7 @@
 /**index.wxss**/
 .container{
-    padding-bottom:60px;
-    box-sizing: border-box;
-}
-.logtxt{
-    width:100%;
-    height:180rpx;
-    color:#fff;
-    line-height: 2;
-    font-size: 36rpx;
-    text-align: center;
-}
-.logtxt text{
-    color:#FAC828;
-    font-size: 48rpx;
-}
-.logimg{
-    margin:0;
-    padding:0;
+   display: block;
+   box-sizing: border-box;
 }
 .logbtn{
     width:60%;
@@ -27,5 +11,6 @@
     font-size: 36rpx;
     letter-spacing: 20rpx;
     background: #1AAD19;
+    margin-bottom: 10px;
     color:#fff;
 }

@@ -2,12 +2,13 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/img/img"
+    "pages/img/img",
+    "pages/shop/shop"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#1E2B39",
-    "navigationBarTitleText": "我的足迹",
+    "navigationBarTitleText": "我的项目",
     "navigationBarTextStyle":"light"
   }
 }

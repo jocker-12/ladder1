@@ -11,8 +11,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.0",
-	"appid": "wx161337b4e48d3509",
+	"libVersion": "2.2.1",
+	"appid": "wx0a3a8c53c0b4cce6",
 	"projectname": "weixin_ciity",
 	"condition": {
 		"search": {
@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -43,7 +43,13 @@
 				{
 					"id": -1,
 					"name": "img",
-					"pathName": "pages/img/img"
+					"pathName": "pages/img/img",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shop",
+					"pathName": "pages/shop/shop"
 				}
 			]
 		}

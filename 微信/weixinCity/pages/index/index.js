@@ -11,14 +11,21 @@ Page({
    
   },
   onLoad: function () {
-   
+      wx.showLoading({
+          title: '加载中',
+      })
   },
   onShow:function(){
-
+      wx.hideLoading();
   },
-  toLogs:function(e) {
-    wx.navigateTo({
-        url: '../logs/logs',
-    })
-  }
+    toLogs: function (e) {
+        wx.navigateTo({
+            url: '../logs/logs',
+        })
+    },
+    toshop:(e)=>{
+        wx.navigateTo({
+            url: '../shop/shop',
+        })
+    }
 })

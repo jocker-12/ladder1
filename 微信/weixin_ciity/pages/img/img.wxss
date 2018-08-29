@@ -1,0 +1,21 @@
+/* pages/img/img.wxss */
+.imgBox{
+    background: linear-gradient(to bottom, #1E2B39,#1F4356, #227B98);
+    height: 100%;
+    padding:0 20rpx;
+    box-sizing: border-box;
+}
+.imgBox{
+    color:#fff;
+    font-size: 32rpx;
+}
+.imgBox text{
+    font-size: 52rpx;
+    color:yellow;
+    margin:0 24rpx;
+}
+.imgBox text.str{
+    color:#000;
+    font-size: 24rpx;
+    margin:0 10rpx;
+}

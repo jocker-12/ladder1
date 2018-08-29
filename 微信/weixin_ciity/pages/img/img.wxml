@@ -1,0 +1,8 @@
+<!--pages/img/img.wxml-->
+<view class='imgBox'>
+踏足中国 <text>{{obj.num}}</text>个省区，<text>{{obj.count}}</text>个城市，超越了<text>{{obj.count/5*10}}%</text>的用户
+<image></image>
+<text class='str'>
+{{obj.str}}
+</text>
+</view>
